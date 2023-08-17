@@ -2,6 +2,7 @@
 const categories = {
     development: {
         slug: "developpement",
+        name: "Développement",
         sections: [
             "Adobe Flash",
             "Adobe Flex",
@@ -70,6 +71,7 @@ const categories = {
     },
     web: {
         slug: "web",
+        name: "Web",
         sections: [
             "Admin système, sécurité",
             "Autres CMS",
@@ -96,6 +98,7 @@ const categories = {
     },
     ecommerce: {
         slug: "e-commerce",
+        name: "E-commerce",
         sections: [
             "Dropshipping",
             "Drupal Commerce",
@@ -118,6 +121,7 @@ const categories = {
     },
     graphics: {
         slug: "graphisme",
+        name: "Graphisme",
         sections: [
             "Animation 3D",
             "Audio, Video, Multimedia",
@@ -137,6 +141,7 @@ const categories = {
     },
     company_system: {
         slug: "systemes-d-entreprise",
+        name: "Système d'entreprise",
         sections: [
             "Administration",
             "AWS",
@@ -162,6 +167,7 @@ const categories = {
     },
     services: {
         slug: "services",
+        name: "Services",
         sections: [
             "Assistance juridique",
             "Assistant virtuel",
