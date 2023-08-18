@@ -1,4 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Conception d'une API REST pour la plateforme codeur.com
+
+Bienvenue sur l'API REST de codeur.com - un projet qui avait pour but de faciliter l'interaction avec la plateforme codeur.com grâce à une interface API intuitive. Il est essentiel de noter que cette API a été développée par un tiers indépendant et ne provient en aucun cas de l'entité officielle de la plateforme.
+
+## Introduction
+
+Explorez notre nouvel outil conçu pour simplifier votre interaction avec la plateforme codeur.com via une interface API intuitive. Fonctionnant grâce à une technique de scraping avancée, cette API vous offrait la possibilité d'extraire une multitude de données en utilisant notre puissant mécanisme de récupération d'informations. Vous pouviez profiter de cette solution pour accéder à un volume maximal de données, tout en bénéficiant de notre outil de collecte de données hautement performant.
+
+## Motivation
+
+Ce projet visait à automatiser la récupération d'informations pertinentes depuis le site codeur.com. L'objectif était de permettre l'extraction de données utiles pour diverses fins, comme l'analyse, la veille concurrentielle et plus encore.
+
+## Fonctionnalités
+
+- Scraping de données depuis les pages de codeur.com.
+- Mise en place d'une API REST pour distribuer les données récupérées de manière structurée.
+
+## Abandon du Projet
+
+Cependant, je regrette de vous informer que ce projet a été abandonné. Après des investigations plus approfondies, il s'est avéré que la plateforme codeur.com n'autorisait pas explicitement l'activité de scraping pour récupérer des données à partir de son site web. Dans le souci de respecter leurs conditions d'utilisation et d'éviter tout conflit potentiel, j'ai pris la décision d'abandonner ce projet.
+
+## Remarque Importante
+
+Bien que le projet ait été abandonné, il peut servir de référence ou d'inspiration pour d'autres projets similaires respectant les conditions d'utilisation des sites web ciblés.
+
+**je rappelons que l'utilisation de techniques de scraping doit toujours être effectuée dans le respect des lois et des conditions d'utilisation des sites web concernés.**
 
 ## Getting Started
 
@@ -11,24 +36,3 @@ yarn dev
 # or
 pnpm dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
