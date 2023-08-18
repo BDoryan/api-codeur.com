@@ -27,6 +27,7 @@ export default function Home() {
     localStorage.setItem('remember_user_token', remember_user_token);
   }, [remember_user_token])
 
+
   const [userData, setUserData] = useState<any | undefined>();
 
   const login = async () => {
@@ -63,6 +64,24 @@ export default function Home() {
 
     const project = props.project;
 
+    /*
+    return (
+      <a href={project.url} target={"_blank"} className="hover:shadow-md transition delay-0 duration-150 ease-in-out mt-5 flex flex-col justify-center px-6 py-6 lg:px-8 border rounded-md">
+        <h1 className="text-lg uppercase font-semibold">{project.title}</h1>
+        <div className="flex">
+          <span className="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300">{project.status}</span>
+          <span className="bg-gray-100  text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300">{project.budget}</span>
+          <span className="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300">{project.numOffers} offres</span>
+          <span className="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300">{project.views} vues</span>
+          {project.givedOffer && (
+            <span className="bg-green-100 text-white-100 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">Offre déposée</span>
+          )}
+        </div>
+        <p className="text-md mt-3">{project.summary}</p>
+
+      </a>
+    )*/
+
     return (
       <a onClick={(e) => setProject(project)} href="#offer" className="hover:shadow-md transition delay-0 duration-150 ease-in-out mt-5 flex flex-col justify-center px-6 py-6 lg:px-8 border rounded-md">
         <h1 className="text-lg uppercase font-semibold">{project.title}</h1>
@@ -84,19 +103,24 @@ export default function Home() {
   return (
     <div className="App py-12">
       <main className="mx-auto py-5 w-full px-5 lg:w-1/2">
-        <h1 className="uppercase text-4xl pt-5 pb-2 font-extrabold">Bienvenue sur l'API REST de <span className="text-indigo-600 normal">codeur.com</span></h1>
-        <p className="text-md pt-4">Explorez notre nouvel outil conçu pour faciliter votre interaction avec la plateforme codeur.com via une interface API intuitive. Il est important de noter que cette API a été développée par un tiers indépendant et ne provient en aucun cas de l'entité officielle de la plateforme. </p>
-        <p className="text-md pt-4">Son fonctionnement se fait grâce à une technique de scraping avancée, cette API vous offre la possibilité d'extraire une multitude de données en utilisant notre puissant mécanisme de récupération d'informations. Profitez de cette solution pour accéder à un volume maximal de données tout en bénéficiant de notre outil de collecte de données hautement performant.</p>
+        <h1 className="uppercase text-5xl pt-5 pb-2 font-extrabold">Bienvenue sur <span className="text-indigo-600 normal">EzCodeur</span></h1>
+        <p className="text-md pt-4">Découvrez notre plateforme innovante pour la prospection simplifiée ! Vous êtes un jeune développeur à la recherche d'opportunités ? Nous comprenons que la prospection peut être chronophage, et les forfaits automatisés peuvent être coûteux. C'est pourquoi nous avons créé un micro-service basé sur le scraping pour vous aider.</p>
+        <p className="text-md pt-4">Notre solution vous permet de automatiser la prospection en proposant des offres en temps réel. Grâce à l'intégration de l'intelligence artificielle, vous pouvez même rédiger des réponses personnalisées pour chaque projet. Ne perdez plus de temps à chercher manuellement des opportunités, laissez notre plateforme optimiser les offres pour des projets pertinents.</p>
+        <p className="text-md pt-4">Nous améliorons également l'expérience utilisateur pour des recherches plus efficaces. Fini les projets peu concrets, notre système filtre les opportunités pour vous offrir des résultats de qualité. De plus, nos offres sont flexibles et personnalisables, vous pouvez les ajuster selon vos besoins.</p>
+        <p className="text-md pt-4">Toutes ces fonctionnalités sont inspirées de ce que propose <a className="text-indigo-600 font-semibold hover:underline" href="https://www.codeur.com/">codeur.com</a>, mais à un coût bien plus abordable. Rejoignez-nous pour une prospection simplifiée et efficace, conçue spécialement pour les jeunes développeurs comme vous.</p>
       </main>
       <section className="mx-auto py-5 w-full px-5 lg:w-1/2">
         <h2 className="uppercase text-3xl pt-5 pb-2 font-bold text-indigo-600">
           Identifications du compte
         </h2>
         <p className="text-md pt-4">
-        Il est impératif de prendre en compte que pour accéder à la fonction de récupération d'informations depuis votre compte, notre outil requiert une préalable identification avec votre compte codeur.com. À cette fin, nous vous demandons de nous fournir votre 'remember_user_token', qui servira à vous authentifier depuis la plateforme.
+          Pour expliquer plus en détail le processus, permettez-moi de vous donner une vue d'ensemble. La récupération des données s'effectue en utilisant une technique appelée "scrapping", qui consiste à extraire des informations à partir de pages web. Pour que cela fonctionne, j'ai besoin d'agir en tant qu'utilisateur autorisé, ce qui nécessite l'accès à votre compte.
         </p>
         <p className="text-md pt-4">
-        Cette démarche nous permettra de recueillir des informations sur les offres qui vous sont proposées dans chaque catégorie et section. En outre, elle facilitera l'extraction de données telles que votre classement, l'id de votre compte, vos prénom et nom, ainsi que votre image de profil. De plus, elle nous permettra de suivre les annonces sur lesquelles vous avez déjà soumis une offre, offrant ainsi une perspective complète de votre activité au sein de la plateforme.  
+          Lorsque vous me fournissez le <code className="bg-zinc-800 text-slate-100">remember_user_token</code>, c'est comme si vous me donniez une clé d'accès spéciale. Je vais intégrer ce token dans chacune de mes requêtes vers les pages pertinentes. Lorsque les pages reçoivent cette requête, elles vérifient le token pour s'assurer que l'accès est autorisé. Une fois que le token est confirmé comme valide, j'obtiens l'accès à votre compte de la même manière que vous le feriez en vous connectant manuellement.
+        </p>
+        <p className="text-md pt-4">
+          En résumé, le <code className="bg-zinc-800 text-slate-100">remember_user_token</code> agit comme une carte d'accès numérique, me permettant d'entrer dans votre compte et de collecter les informations nécessaires. Cela garantit que les données récupérées sont précises et reflètent fidèlement ce que vous auriez pu voir si vous aviez consulté vos pages vous-même.
         </p>
 
         <div className="mt-5 flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 border rounded-md sm:mx-auto sm:w-full sm:max-w-md">
@@ -109,7 +133,7 @@ export default function Home() {
               <div>
                 <label htmlFor="remember_user_token" className="block text-sm font-medium leading-6 text-gray-900">remember_user_token</label>
                 <div className="mt-2">
-                  <input value={remember_user_token} onChange={(e) => setRememberUserToken(e.target.value)} id="remember_user_token" name="token" type="password" autoComplete="token" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm px-2 sm:leading-6" />
+                  <input value={remember_user_token} onChange={(e) => setRememberUserToken(e.target.value)} id="remember_user_token" name="token" type="token" autoComplete="token" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm px-2 sm:leading-6" />
                 </div>
               </div>
               <div>
@@ -152,9 +176,7 @@ export default function Home() {
         <h2 className="uppercase text-3xl pt-5 pb-2 font-bold text-indigo-600">
           Récupérations des projets
         </h2>
-        <p className="text-md pt-2">
-        La collecte des projets s'effectue à partir de votre compte codeur.com, ce processus vise à extraire les informations en relation avec vous. Par exemple, cela permet de déterminer si vous avez déjà soumis une offre pour un projet donné.
-        </p>
+        <p className="text-md pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex atque adipisci cupiditate provident accusamus repellendus, eos, nobis itaque possimus magnam porro ducimus quae dolorum consequatur doloribus quisquam vel totam debitis!</p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-5">
           <div className="">
@@ -170,7 +192,7 @@ export default function Home() {
                   <div>
                     <label htmlFor="remember_user_token" className="block text-sm font-medium leading-6 text-gray-900">remember_user_token</label>
                     <div className="mt-2">
-                      <input value={remember_user_token} disabled={true} id="remember_user_token" name="token" type="password" autoComplete="token" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm px-2 sm:leading-6" />
+                      <input value={remember_user_token} disabled={true} id="remember_user_token" name="token" type="token" autoComplete="token" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm px-2 sm:leading-6" />
                     </div>
                   </div>
                   <div>
@@ -212,7 +234,7 @@ export default function Home() {
       </section >
       <section id="offer" className="mx-auto py-5 w-full px-5 lg:w-1/2">
         <h2 className="uppercase text-3xl pt-5 pb-2 font-bold text-indigo-600">
-          Formuler une offre
+          Formuler une offre avec l'IA
         </h2>
         <p className="text-md pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex atque adipisci cupiditate provident accusamus repellendus, eos, nobis itaque possimus magnam porro ducimus quae dolorum consequatur doloribus quisquam vel totam debitis!</p>
 
